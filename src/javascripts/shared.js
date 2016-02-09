@@ -19,7 +19,8 @@ $(function(){
 	form.submit(function(e){
 		e.preventDefault();
 		$.ajax({
-			type: 'post',
+			type: 'get', //Сейчас здесь стоит get, чтобы можно было протестировать удачно,
+			// можно заменить на post, но по умолчанию веб-сервер будет блокировать такое обращение к статике
 			url: 'api/save.json',
 			data: {
 				title: input.val()
