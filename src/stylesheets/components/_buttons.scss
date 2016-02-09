@@ -1,0 +1,54 @@
+/**
+ * Buttons
+ *
+ * Creates a button. Can be used with either <a>, <button> or <input type="submit"> elements.
+ *
+ * @markup
+ *   <a class="btn">Default button</a>
+ *   <a class="btn disabled">Disabled state</a>
+ */
+
+.btn {
+    border: 0;
+    box-shadow: none;
+
+    // Size
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+
+/**
+ * Button for error messages.
+ * Important: this button style shouldn't be used for anything but error modal
+ * dialogs
+ *
+ * @markup
+ *   <a class="btn btn-error">Error</a>
+ */
+
+.btn-error {
+    @include button-variant (
+        $color:             $color-background,
+        $background:        $color-error,
+
+        $color-active:      $color-heading,
+        $background-active: $color-error
+    );
+}
+
+/**
+ * Button with blue background
+ *
+ * @markup
+ *   <a class="btn btn-primary">Do it!</a>
+ */
+.btn-primary {
+    @include button-variant (
+        $color:             $color-background,
+        $background:        $color-primary,
+
+        $color-active:      $color-heading,
+        $background-active: $color-primary
+    );
+}

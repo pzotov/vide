@@ -1,0 +1,43 @@
+Task description:
+Create a front-end for simple / single-page “TODO” application based on existing code. Please note that you must not remove existing CSS classes, but you are allowed to add new or modify them as long as they remain visually similar.
+
+Requirements:
+*) Form with one input and one button. The button must be similar to existing button style, but having blue background colour
+*) List of TODO items, where each TODO item consists of a title, date when it was added (date format dd.mm.yyyy), author name (link), and "Remove" link
+*) List of existing TODO tasks should be loaded from data.json file through Ajax request (date format in json file is yyyy-mm-dd)
+*) On item delete event request goes to delete.json (your code must handle success and failure messages)
+*) On form submit event send POST request to save.json. Add data coming in save.json to the list of TODO tasks.
+
+Additional requirements:
+*) Use jQuery
+*) Use HTML5. Must be valid and semantically correct html
+*) Use CSS3/SCSS, no images
+*) Should work in latest version of IE, FF and Chrome
+*) Resolve all “@TODO” comments
+*) Provide well structured and maintainable code
+*) Make sure the data received from user/server is properly sanitised and validated
+*) Do not link to files from CDN using <script> or <link>
+
+Note:
+*) Visual design of the application is not important - we’ll judge your HTML/CSS/JS skills
+*) Don’t write any backend scripts, just write front-end assuming that data.json returns data for all items,
+save.json saves and returns new item and delete.json removes item.
+
+.json files for testing, they are also included in the files provided to you:
+
+	data.json content:
+	[
+		{"id": "1", "title": "Fix a car", "date": "1970-02-23", "author": "John Doe", "url": "http://www.example.com"},
+		{"id": "2", "title": "Go shopping", "date": "1970-01-12", "author": "Jane Doe"}
+	]
+	
+	save.json content:
+	{
+		"id": "3",
+		"title": "Just assume this title is correct", "date": "1970-02-23", "author": "John Doe", "url": "http://www.example.com"}
+	}
+	
+	delete.json content, status can be either 0 (failure) or 1 (success):
+	{
+		"status": 1
+	}

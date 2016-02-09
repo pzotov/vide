@@ -1,0 +1,9 @@
+.todo-list {
+  border-collapse: collapse;
+  margin: 0 auto;
+
+  td, th {
+    padding: 4px 6px;
+    border-bottom: 1px solid $color-primary;
+  }
+}

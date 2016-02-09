@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js"><!-- @TODO "no-js" should be replaced by "js" when it's available -->
+<head>
+    <!-- Default meta tags -->
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+        <title>ToDo test application</title>
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="stylesheets/shared.css">
+</head>
+<body>
+
+    <main>
+	    <form class="" id="todo-form">
+		    <input type="text" size="40" id="todo-input" placeholder="Write your task here" required>
+		    <button type="submit" class="btn btn-primary">Add</button>
+	    </form>
+
+	    <table class="todo-list">
+		    <thead>
+		    <tr>
+			    <th class="title">Title</th>
+			    <th class="date">Date</th>
+			    <th class="author">Author</th>
+			    <th class="actions"></th>
+		    </tr>
+		    </thead>
+		    <tbody id="todo-list"></tbody>
+	    </table>
+        <!--
+            <a class="btn btn-error">Error</a>
+        -->
+    </main>
+
+    <script type="text/x-template" id="todo-row">
+	    <tr id="row%index">
+		    <td class="title"></td>
+		    <td class="date"></td>
+		    <td class="author"></td>
+		    <td class="actions">
+			    <a href="#" class="btn-remove">Remove</a>
+		    </td>
+	    </tr>
+    </script>
+
+    <!-- JS -->
+	    <script src="javascripts/jquery.min.js"></script>
+        <script src="javascripts/shared.js"></script>
+
+</body>
+</html>
